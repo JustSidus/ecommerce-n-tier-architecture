@@ -1,15 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Usuarios.Datos;
 using Usuarios.Entidades;
 
+
 namespace Usuarios.Presentacion.Controllers
 {
+    [Authorize]
     public class PersonasController : Controller
     {
         private readonly AplicacionDbContext _context;
